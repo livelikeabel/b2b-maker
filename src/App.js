@@ -3,6 +3,11 @@ import InputListTemplate from './components/InputListTemplate';
 import './App.css';
 
 class App extends Component {
+
+  testConnection = () => {
+    
+  };
+
   render() {
     return (
       <div>
