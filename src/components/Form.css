@@ -23,12 +23,16 @@
     color: rgba(128, 128, 128, 0.493);
   }
 
-  .create-button {
-    margin: auto;
-    margin-top: 8vh;
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form button {
+    width: 10rem;
+    margin-top: 6vh;
     margin-bottom: 2rem;
     text-align: center;
-    width: 5vw;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     padding-left: 1rem;
@@ -37,7 +41,9 @@
     border-radius: 3px;
     color: white;
     font-weight: 600;
-    cursor: pointer;
+    font-size: 1rem;
+    cursor: pointer; 
+    align-items: center !important;
   }
 
   .create-button:hover {

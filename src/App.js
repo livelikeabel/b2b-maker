@@ -3,11 +3,13 @@ import InputListTemplate from './components/InputListTemplate';
 import './App.css';
 
 class App extends Component {
-  
+
   render() {
+
+    
     return (
       <div>
-        <InputListTemplate />
+        <InputListTemplate/>
       </div>
     );
   }
