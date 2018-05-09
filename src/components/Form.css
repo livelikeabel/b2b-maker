@@ -1,22 +1,45 @@
 .form input {
-    display: block;
     flex: 1; /* 버튼을 뺀 빈 공간을 모두 채워줍니다 */
     font-size: 1.25rem;
     outline: none;
     border: none;
-    border-bottom: 1px solid #ff6327;
+    border-bottom: 1px solid #ff63276b;
+  }
+
+  .myInput {
+    margin: 2.5rem;
+    margin-left: 1rem;
+    font-size: 1.8rem;
+    color: gray;
+    display: flex;
+    text-align: center
+  }
+  .myInput > span {
+    width: 8rem;
+    margin-right: 1rem;
+  }
+  
+  .myInput > input::placeholder {
+    color: rgba(128, 128, 128, 0.493);
   }
 
   .create-button {
-    width: 3vw;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    margin: auto;
+    margin-top: 8vh;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 5vw;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-left: 1rem;
     background: #ff6327;
     border-radius: 3px;
     color: white;
     font-weight: 600;
     cursor: pointer;
+  }
+
+  .create-button:hover {
+    background: #ff6427be;
   }
