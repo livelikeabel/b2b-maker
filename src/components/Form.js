@@ -11,22 +11,38 @@ class Form extends Component {
     event.preventDefault();
     const data = new FormData(event.target);
 
-    fetch('https://apialpha.plating.co.kr/canteen/v3/company', {
-        method: 'POST',
-        body: data,
+    const inputsArr = [];
+    for (var value of data.values()) {
+      inputsArr.push(value);
+    }
+    const inputsObject = {
+      name: inputsArr[0],
+      url: inputsArr[1],
+      address: inputsArr[2],
+      detail: inputsArr[3]
+    };
+
+    //fetch('https://apialpha.plating.co.kr/canteen/v3/company', {
+    fetch("http://localhost:25056/canteen/v3/company", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(inputsObject)
     })
-    .then((res)=> {
-        console.log(res);
-        if(res.ok){
-            console.log('fetch data success!')
+      .then(res => {
+        if (res.ok) {
+          console.log("fetch data success!");
         } else {
-            console.log('fetch fail... OTL');
+          console.log("fetch fail... OTL");
         }
-    })
-    .catch((err)=>{
-        console.log('acquire err !!!!' + err.message);
-    });
+      })
+      .catch(err => {
+        console.log("acquire err !!!!" + err.message);
+      });
   }
+
   render() {
     return (
       <form className="form" onSubmit={this.handleSubmit}>
@@ -57,7 +73,7 @@ class Form extends Component {
           />
         </div>
         <div className="button">
-            <button>추가</button>
+          <button>추가</button>
         </div>
       </form>
     );
