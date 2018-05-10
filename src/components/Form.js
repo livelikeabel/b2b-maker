@@ -34,9 +34,18 @@ class Form extends Component {
       .then(res => {
         if (res.ok) {
           console.log("fetch data success!");
+          return res.json();
         } else {
           console.log("fetch fail... OTL");
         }
+      })
+      .then((data)=>{
+          if(data) {
+            const { newUrl } = data;
+            console.log(newUrl);
+            alert(`             아래 주소를 통해 새로 생긴 페이지를 확인하세요
+            https://canteen.plating.co.kr/${newUrl}`);
+          }
       })
       .catch(err => {
         console.log("acquire err !!!!" + err.message);

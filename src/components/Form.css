@@ -49,3 +49,7 @@
   .create-button:hover {
     background: #ff6427be;
   }
+
+  .no-see {
+    display: none;
+  }
