@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Form.css";
 
+import { setPopupTrue, setPopupFalse } from '../redux/form/actions'
+
 class Form extends Component {
   constructor() {
     super();
@@ -63,6 +65,7 @@ class Form extends Component {
   render() {
     return (
       <div>
+        {/* <form className="form" onSubmit={this.props.setPopupTrue({ showPopup: true })}> */}
         <form className="form" onSubmit={this.handleSubmit}>
           <div className="myInput">
             <span>Name</span>
