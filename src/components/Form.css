@@ -23,6 +23,22 @@
     color: rgba(128, 128, 128, 0.493);
   }
 
+  .myInput-hide {
+    display: none;
+  }
+
+  .fakeInput-wrapper {
+    flex: 1;
+  }
+
+  .fakeInput {
+    color: rgba(128, 128, 128, 0.493);
+    font-size: 1.25rem;
+    border-bottom: 1px solid #ff63276b;
+    flex:1;
+    text-align: left;
+  }
+
   .button {
     display: flex;
     justify-content: center;
@@ -44,10 +60,6 @@
     font-size: 1rem;
     cursor: pointer; 
     align-items: center !important;
-  }
-
-  .create-button:hover {
-    background: #ff6427be;
   }
 
   .no-see {
