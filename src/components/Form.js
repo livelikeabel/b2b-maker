@@ -8,6 +8,8 @@ class Form extends Component {
   }
 
   handleSubmit(event) {
+    console.log(`${process.env.REACT_APP_PLATING_API_URL}/canteen/v3/company`)
+    
     event.preventDefault();
     const data = new FormData(event.target);
 
@@ -22,8 +24,10 @@ class Form extends Component {
       detail: inputsArr[3]
     };
 
-    //fetch('https://apialpha.plating.co.kr/canteen/v3/company', {
-    fetch("http://localhost:25056/canteen/v3/company", {
+
+    // api local연결시.
+    // fetch("http://localhost:25056/canteen/v3/company", {
+      fetch(`${process.env.REACT_APP_PLATING_API_URL}/canteen/v3/company`, {
       method: "POST",
       headers: {
         Accept: "application/json",
