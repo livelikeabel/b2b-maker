@@ -80,8 +80,8 @@ class Form extends Component {
           </div>
           <div className="myInput">
             <span>Address</span>
-            <div className="fakeInput-wrapper" onClick={this.prompt}>
-              <div className="fakeInput">서울 강남구 논현동 122-8</div>
+            <div className="fakeInput-wrapper" onClick={() => this.props.setPopupTrue({showPopup: true})}>
+              <div className="fakeInput">{this.props.value}</div>
             </div>
               <input
                 id="address"
@@ -109,7 +109,25 @@ class Form extends Component {
   }
 }
 
+// //props 값으로 넣어 줄 상태를 정의한다.
+// const mapStateToProps = (state) => ({
+
+// });
+// //props 값으로 넣어 줄 액션
+// const mapDispatchToProps = (dispatch) => ({
+//   setPopupTrue : () => dispatch(setPopupTrue()),
+//   setPopupFalse
+// });
+
 export default compose(
-  connect()
-)
-Form;
+  connect(
+    (state) => ({
+      value: state.form.value
+    }),
+    {
+      setPopupTrue,
+      setPopupFalse,
+    }
+  )
+)(Form);
+

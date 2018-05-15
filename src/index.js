@@ -13,14 +13,6 @@ import "./index.css";
 const history = createHistory();
 const store = createNewStore(history);
 
-const ReactGA = require("react-ga");
-
-ReactGA.initialize("UA-69160528-10", { debug: true });
-
-const onUpdate = () => {
-  ReactGA.set({ page: window.location.pathname });
-  ReactGA.pageview(window.location.pathname);
-};
 
 ReactDOM.render(
   <Provider store={store}>

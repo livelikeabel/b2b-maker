@@ -5,6 +5,7 @@ import {
 
 const initialState = {
     showPopup: false,
+    value: '서울 강남구 논현동 9999-9999',
 };
 
 const form = (state = initialState, action) => {
