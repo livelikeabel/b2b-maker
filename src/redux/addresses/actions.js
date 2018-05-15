@@ -26,8 +26,9 @@ export function loadAddressesSuccess(addresses) {
     }
 }
 
-export function loadAddressesFailure() {
+export function loadAddressesFailure(err) {
     return {
         type: LOAD_ADDRESSES_FAILURE,
+        err,
     };
 }

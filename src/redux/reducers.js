@@ -1,4 +1,4 @@
-import addresses from './address/reducer';
+import addresses from './addresses/reducer';
 import form from './form/reducer';
 
 
