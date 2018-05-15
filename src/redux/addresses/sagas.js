@@ -1,6 +1,6 @@
 import { takeEvery, put, call } from "redux-saga/effects";
 
-import { getAddressInfo } from "src/api";
+import { getAddressInfo } from "../../api";
 
 import {
   LOAD_ADDRESSES,
