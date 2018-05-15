@@ -1,4 +1,4 @@
-export const NAME = 'B2B';
+export const NAME = 'ADDRESSES';
 
 export const LOAD_ADDRESS = `${NAME}/LOAD_ADDRESS`;
 export const LOAD_ADDRESS_REQUEST = `${NAME}/LOAD_ADDRESS_REQUEST`;
