@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux';
+import { compose } from 'recompose'; //앤 또 뭐지....
+
 import "./Form.css";
 
 import { setPopupTrue, setPopupFalse } from '../redux/form/actions'
@@ -106,4 +109,7 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default compose(
+  connect()
+)
+Form;
