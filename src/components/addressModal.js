@@ -5,7 +5,7 @@ import { compose } from "recompose"; // ???
 // import PropTypes from 'prop-types'
 import debug from "debug";
 
-import Modal from "./Modal";
+import "./AddressModal.css";
 
 class AddressModal extends Component {
   constructor() {
@@ -13,22 +13,25 @@ class AddressModal extends Component {
   }
   render() {
     return (
-      <Modal>
-        <div>
-          <div className="TextInput-wrapper">
-            <form>
-              <input />
-              <button>검색</button>
-            </form>
-          </div>
-          {/* {조건에 따라 보여주기} */}
-          <div className="addresses">
-            <div className="address">
-              <p>address</p>
+      <div>
+        <div className="Dimmed" />
+        <div className="ModalWrapper">
+          <div className="ModalBox">
+            <div className="TextInput-wrapper">
+              <form>
+                <input />
+                <button>검색</button>
+              </form>
+            </div>
+            {/* {조건에 따라 보여주기} */}
+            <div className="addresses">
+              <div className="address">
+                <p>address</p>
+              </div>
             </div>
           </div>
         </div>
-      </Modal>
+      </div>
     );
   }
 }

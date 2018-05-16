@@ -1,3 +1,38 @@
+.Dimmed {
+  /* 레이아웃 - 화면 꽉 채움 */
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  
+  /* 레이어 */
+  z-index: 5;
+
+  /* 색상 */
+  background: rgba(0,0,0,0.3);
+}
+
+.ModalBox {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.ModalWrapper {
+  /* 레이아웃 */
+  position: fixed;
+  /* 화면 가운대로 정렬 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* 레이어 */
+  z-index: 10;
+
+  /* 너비 (기본값 400px) */
+  width: 400px;
+}
+
 .TextInput-rapper {
   padding: 0 4rem;
   padding-top: 2rem;
@@ -18,3 +53,6 @@
   margin-right: 40px;
   line-height: 1.2;
 }
+
+
+
