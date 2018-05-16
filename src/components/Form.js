@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { compose } from 'recompose'; //앤 또 뭐지....
 
 import "./Form.css";
+import AddressModal from './AddressModal';
 
 import { setPopupTrue, setPopupFalse } from '../redux/form/actions'
 
@@ -66,8 +67,18 @@ class Form extends Component {
   }
 
   render() {
+    let popup = null;
+    const popupAvailable = this.props.showPopup;
+    if(popupAvailable) {
+      popup = <AddressModal />;
+    } else {
+      popup = <div />;
+    }
+
+
     return (
       <div>
+        {popup}
         {/* <form className="form" onSubmit={this.props.setPopupTrue({ showPopup: true })}> */}
         <form className="form" onSubmit={this.handleSubmit}>
           <div className="myInput">
@@ -122,7 +133,8 @@ class Form extends Component {
 export default compose(
   connect(
     (state) => ({
-      value: state.form.value
+      value: state.form.value,
+      showPopup: state.form.showPopup,
     }),
     {
       setPopupTrue,
