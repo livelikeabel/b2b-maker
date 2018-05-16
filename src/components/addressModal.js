@@ -6,7 +6,7 @@ import { compose } from "recompose"; // ???
 import classnames from "classnames/bind";
 import debug from "debug";
 
-// import TextInput from './TextInput';
+import TextInput from './TextInput';
 // import Button from './Button'
 
 import css from "./AddressModal.scss";
@@ -19,10 +19,15 @@ class AddressModal extends Component {
     super(props);
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   handleSubmit() {
     alert("hello");
+  }
+
+  handleInputChange() {
+      alert('handleInputChange!');
   }
 
   render() {
@@ -32,19 +37,21 @@ class AddressModal extends Component {
         <div className={cx(`${moduleName}-ModalWrapper`)}>
           <div className={cx(`${moduleName}-ModalBox`)}>
             <div className={cx(`${moduleName}-TextInput-wrapper`)}>
-              {/* <form onSubmit={this.handleSubmit}>
+              <form onSubmit={this.handleSubmit}>
                 <TextInput
                   name="address"
-                  value={values.address || ""}
-                  onChange={handleInputChange}
+                //   value={values.address || ""}
+                  value={'it is value'}
+                  onChange={this.handleInputChange}
                   placeholder="     주소를 입력하세요"
                   buttonComponent={
-                    <Button className={cx(`${moduleName}-search-button`)}>
-                      검색
-                    </Button>
+                      <div />
+                    // <Button className={cx(`${moduleName}-search-button`)}>
+                    //   검색
+                    // </Button>
                   }
                 />
-              </form> */}
+              </form>
             </div>
             {/* {조건에 따라 보여주기} */}
             <div className={cx(`${moduleName}-addresses`)}>

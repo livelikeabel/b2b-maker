@@ -1,0 +1,53 @@
+.TextInput {
+  background-color: #fefefe;
+  border: 1px solid #949494;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #adadad;
+  text-align:center;
+
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #adadad;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #adadad;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #adadad;
+  }
+
+  &-input {
+    flex: 1 1;
+
+    line-height: 1.0em;
+
+    border-color: transparent;
+    border-radius: 6px;
+    background-color: #fefefe;
+    padding: 4px;
+    font-size: 0.875rem;
+
+    width: 100%;
+    height: 100%;
+
+    &--haveButton {
+      margin-right: 1rem;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    /**
+     * button component style
+     */
+    ~ button {
+
+    }
+  }
+}
