@@ -1,0 +1,32 @@
+.Button {
+  &:focus {
+    outline: 0;
+  }
+  cursor: pointer;
+  vertical-align: baseline;
+
+  line-height: 1.0em;
+  border: none !important;
+  padding: 0.5em 1.0em;
+  border-radius: 3px;
+
+  &--normal {
+    background-color: transparent;
+    border: 1px solid #949494;
+    color: #3c3b3b;
+  }
+
+  &--brand {
+    background-color:  #ff4e00;
+    border: 1px solid  #ff4e00;
+    color:#fefefe;
+
+  }
+
+  &--disabled {
+    background-color:  #d9d9d9;
+    border: 1px solid  #d9d9d9;
+    color: #949494;
+  }
+
+}

@@ -26,10 +26,13 @@
 
     /* 너비 (기본값 400px) */
     width: 400px;
+
   }
   &-ModalBox {
     background: white;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 2px solid #949494;
+    border-radius: 6px;
+    // height: 600px;
   }
   &-TextInput-wrapper {
     padding: 0 4rem;
@@ -38,16 +41,29 @@
 
   &-addresses {
     margin-top: 20px;
-    overflow-y: auto;
+    overflow-y: scroll;
+    height: 500px;
   }
 
   &-address {
+    display: flex;
     position: relative;
     min-height: 30px;
+    justify-content: space-between;
+    border-bottom: 1px solid #949494;
     > p {
-      padding: 1em 0;
-      margin-right: 40px;
+      display: inline;
+      // padding: 1em 0;
+      margin-left: 20px;
       line-height: 1.2;
+      font-weight: 400;
+      font-size: 13.5px;
+    }
+    > span {
+      margin-top: 15px;
+      margin-right: 15px;
+      font-weight: 100;
+      font-size: 12px;
     }
   }
 }

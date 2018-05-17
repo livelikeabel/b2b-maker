@@ -4,13 +4,13 @@ import {
   LOAD_ADDRESSES_FAILURE
 } from "./actions";
 
-const addresses = (
-  state = {
-    loading: false,
-    data: []
-  },
-  action
-) => {
+const initialState = {
+  loading: false,
+  data: [],
+  // values: "주소를 입력하세요"
+};
+
+const addresses = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_ADDRESSES_REQUEST:
       return {
