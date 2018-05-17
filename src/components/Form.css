@@ -40,6 +40,11 @@
     text-align: left;
   }
 
+  .fakeInput:hover {
+   color:rgba(255, 255, 255, 0.564);
+   background: #fc7b486d;
+  }
+
   .button {
     display: flex;
     justify-content: center;
@@ -56,11 +61,18 @@
     padding-right: 1rem;
     background: #ff6327;
     border-radius: 3px;
+    border: solid 1px #ff6327;
     color: white;
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer; 
     align-items: center !important;
+  }
+
+  .form button:hover {
+    background: #fc7b48;
+    color: white;
+    border: solid 1px #ff6327;
   }
 
   .no-see {

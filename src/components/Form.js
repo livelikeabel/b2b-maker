@@ -83,7 +83,7 @@ class Form extends Component {
         <form className="form" onSubmit={this.handleSubmit}>
           <div className="myInput">
             <span>Name</span>
-            <input id="name" name="name" type="text" placeholder="플레이팅" />
+            <input id="name" name="name" type="text" placeholder="폴레이팅" />
           </div>
           <div className="myInput">
             <span>URL</span>

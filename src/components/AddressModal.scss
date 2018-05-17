@@ -50,7 +50,7 @@
     position: relative;
     min-height: 30px;
     justify-content: space-between;
-    border-bottom: 1px solid #949494;
+    border-bottom: 1px solid #f1f3f5;
     > p {
       display: inline;
       // padding: 1em 0;
@@ -64,6 +64,17 @@
       margin-right: 15px;
       font-weight: 100;
       font-size: 12px;
+    }
+    &:hover {
+      background: #fc7b4841;
+      > p {
+        color: #949494;
+      }
+    }
+  }
+  &-search-button {
+    &:hover {
+      color: #949494;
     }
   }
 }
