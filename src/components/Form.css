@@ -32,7 +32,8 @@
   }
 
   .fakeInput {
-    color: rgba(128, 128, 128, 0.493);
+    /* color: rgba(128, 128, 128, 0.493); */
+    color: black;
     font-size: 1.25rem;
     border-bottom: 1px solid #ff63276b;
     flex:1;

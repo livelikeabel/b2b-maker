@@ -9,6 +9,8 @@ import debug from "debug";
 import withHandleInputChange from "../hocs/input/withHandleInputChange";
 
 import { loadAddresses } from "../redux/addresses/actions";
+import { setPopupFalse } from "../redux/form/actions";
+import { setValue } from "../redux/form/actions";
 import TextInput from "./TextInput";
 import Button from "./Button";
 
@@ -22,6 +24,7 @@ class AddressModal extends Component {
     super(props);
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleAddressSelect = this.handleAddressSelect.bind(this);
   }
 
   handleSubmit(e) {
@@ -32,8 +35,12 @@ class AddressModal extends Component {
     this.props.loadAddresses(address);
   }
 
+  handleAddressSelect(address) {
+    this.props.setValue({value: address.jibunAddress});
+    this.props.setPopupFalse({showPopup: false})
+  }
+
   render() {
-    console.log("!!!", this.props);
     const { addresses, values, handleInputChange } = this.props;
 
     return (
@@ -56,14 +63,6 @@ class AddressModal extends Component {
                 />
               </form>
             </div>
-            {/* {조건에 따라 보여주기} */}
-            {/* {addresses.data.length !== 0 && (
-                <div className={cx(`${moduleName}-addresses`)}>
-                <div className={cx(`${moduleName}-address`)}>
-                  <p>address</p>
-                </div>
-              </div>
-            )} */}
             <div className={cx(`${moduleName}-addresses`)}>
               {addresses.data.map(address => {
                 if (
@@ -74,6 +73,7 @@ class AddressModal extends Component {
                     <div
                       className={cx(`${moduleName}-address`)}
                       key={address.lon}
+                      onClick={() => this.handleAddressSelect(address)}
                     >
                       <p>{address.address}</p>
                       <span> 새벽 가능 </span>
@@ -87,6 +87,7 @@ class AddressModal extends Component {
                     <div
                       className={cx(`${moduleName}-address`)}
                       key={address.lon}
+                      onClick={() => this.handleAddressSelect(address)}
                     >
                       <p>{address.address}</p>
                       <span> 새벽,점심,저녁 가능 </span>
@@ -116,7 +117,9 @@ class AddressModal extends Component {
 
 export default compose(
   connect(({ addresses }) => ({ addresses }), {
-    loadAddresses
+    loadAddresses,
+    setPopupFalse,
+    setValue
   }),
-  withHandleInputChange
+  withHandleInputChange,
 )(AddressModal);

@@ -98,7 +98,7 @@ class Form extends Component {
                 id="address"
                 name="address"
                 type="hidden"
-                value="모달에서 받아온값"
+                value={this.props.value}
                 placeholder="서울 강남구 논현동 122-8"
               />
           </div>
