@@ -67,7 +67,7 @@
     "build": "node scripts/build.js",
     "dev": "cross-env NODE_PATH=./src NODE_ENV=development node scripts/start.js",
     "start:dev": "cross-env NODE_PATH=./src NODE_ENV=development node scripts/start.js",
-    "start:prod": "pm2 serve ./config/jest/build 4000 build",
+    "start:prod": "pm2 serve ./config/jest/build 5030 build",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
