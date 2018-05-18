@@ -25,6 +25,7 @@ class AddressModal extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleAddressSelect = this.handleAddressSelect.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   handleSubmit(e) {
@@ -40,6 +41,11 @@ class AddressModal extends Component {
     this.props.setPopupFalse({showPopup: false})
   }
 
+  handleClose(e) {
+    e.preventDefault();
+    this.props.setPopupFalse({showPopup: false})
+  }
+
   render() {
     const { addresses, values, handleInputChange } = this.props;
 
@@ -48,6 +54,9 @@ class AddressModal extends Component {
         <div className={cx(`${moduleName}-Dimmed`)} />
         <div className={cx(`${moduleName}-ModalWrapper`)}>
           <div className={cx(`${moduleName}-ModalBox`)}>
+          <div className={cx(`${moduleName}-Close`)}
+                onClick={this.handleClose}
+          >X</div>
             <div className={cx(`${moduleName}-TextInput-wrapper`)}>
               <form onSubmit={this.handleSubmit}>
                 <TextInput

@@ -36,7 +36,6 @@
   }
   &-TextInput-wrapper {
     padding: 0 4rem;
-    padding-top: 2rem;
   }
 
   &-addresses {
@@ -67,6 +66,7 @@
     }
     &:hover {
       background: #fc7b4841;
+      cursor: pointer;
       > p {
         color: #949494;
       }
@@ -76,5 +76,12 @@
     &:hover {
       color: #949494;
     }
+  }
+  &-Close {
+    color: #949494;
+    font-size: 2rem;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 15px;
   }
 }
